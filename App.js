@@ -26,6 +26,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import AuthPage from './page/AuthPage';
 import RegisterPage from './page/RegisterPage';
+import HomePage from './page/Homepage';
 
 
 const Stack = createNativeStackNavigator();
@@ -43,6 +44,11 @@ const App = () => {
           name="Register"
           component={RegisterPage}
           options={{ title: 'Регистрация' }}
+        />
+        <Stack.Screen
+          name="Home"
+          component={HomePage}
+          options={{ title: 'Home' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
